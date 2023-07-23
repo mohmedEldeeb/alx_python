@@ -1,4 +1,4 @@
 def pow(a, b):
-    value x ** b
+    value a ** b
     return value
 
