@@ -4,13 +4,12 @@ import sys
 def printArges():
     count_args = len(argv)
     argv = sys.argv[1:]
-    print("{}".format(count_args), end="")
     if count_args == 0:
-        print(" arguments.", end="\n")
+        print(count_args, "arguments.",end="\n")
     elif count_args == 1:
-        print(" argument:\n1: {}".format(argv[0]), end="\n")
+        print(count_args, "argument:",end="\n")
     else:
-        print(" arguments:", end="\n")
+        print(num_argue, "arguments:",end="\n")
 
         for i, arg in enumerate(argv, 1):
             print("{}: {}".format(i, arg))
