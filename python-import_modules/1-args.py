@@ -12,9 +12,9 @@ def printArges():
     else:
         print(count_args, "arguments:",end="\n")
 
-        for i, arg in enumerate(argv, 1):
-            print("{}: {}".format(i, arg))
-
+    for i, arg in enumerate(argv, start=1):
+        print("{}: {}".format(i, arg))
 
 if __name__ == "__main__":
     printArges()
+
