@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """
 semple function has a method to check if object is an kind of a class
 """

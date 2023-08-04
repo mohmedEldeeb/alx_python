@@ -1,8 +1,8 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """
 semple function has a method to check if object is an instance of a class
 """
-dev s_same_class(obj, a_class):
+def is_same_class(obj, a_class):
     """
     method to check if object is an instance of a class
     """
