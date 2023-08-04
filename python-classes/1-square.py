@@ -11,14 +11,14 @@ class Square:
         """
         Initializes a Square class
         """
-        self.__size = self.is_int(size)
+        self.__size = self.check_int(size)
 
     def check_int(self, size):
         """
         to check if the number in int
         """
         if isinstance(size, int):
-            return (self.is_negative(size))
+            return (self.check_negative(size))
         else:
             raise TypeError("size must be an integer")
 
