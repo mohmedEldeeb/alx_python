@@ -4,7 +4,6 @@ import sys
 def printArges():
     argv = sys.argv[1:]
     count_args = len(argv)
-   
     if count_args == 0:
         print(count_args, "arguments.",end="\n")
     elif count_args == 1:
