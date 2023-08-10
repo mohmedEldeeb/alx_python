@@ -29,6 +29,7 @@ class Rectangle(Base):
         """
             mathed getter to get private width
         """
+        self.validation('height', value)
         self.__height = value
     @property
     def width(self):
@@ -42,6 +43,7 @@ class Rectangle(Base):
         """
             mathed getter to get private width
         """
+        self.validation('width', value)
         self.__width = value
 
 
@@ -57,6 +59,7 @@ class Rectangle(Base):
         """
             mathed getter to get private width
         """
+        self.validation('y', value)
         self.__y = value
     
     @property
@@ -71,4 +74,5 @@ class Rectangle(Base):
         """
             mathed getter to get private width
         """
+        self.validation('x', value)
         self.__x = value
