@@ -15,3 +15,60 @@ class Rectangle(Base):
         self.y = y
         self.x = x
         super().__init__(id)
+
+
+    @property
+    def height(self):
+        """
+            mathed getter to get private width
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """
+            mathed getter to get private width
+        """
+        self.__height = value
+    @property
+    def width(self):
+        """
+            mathed getter to get private width
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """
+            mathed getter to get private width
+        """
+        self.__width = value
+
+
+    @property
+    def y(self):
+        """
+            mathed getter to get private width
+        """
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """
+            mathed getter to get private width
+        """
+        self.__y = value
+    
+    @property
+    def x(self):
+        """
+            mathed getter to get private width
+        """
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """
+            mathed getter to get private width
+        """
+        self.__x = value
