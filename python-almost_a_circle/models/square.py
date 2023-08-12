@@ -18,5 +18,21 @@ class Square(Rectangle):
         """
             mothed that returns a string
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        x = "[{}] ({}) ".format(self.__class__.__name__, self.id)
+        z = "{}/{} - {}".format(self.x, self.y, self.width)
+        return x + z
 
+    @property
+    def size(self):
+        """
+            mathed getter to get private width
+        """
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """
+        setter method
+        """
+        self.width = value
+        self.height = value
