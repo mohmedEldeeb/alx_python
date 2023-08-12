@@ -8,6 +8,9 @@ import sys
 
 
 def main():
+    """
+        take arguments data and url and make request
+    """
     url = sys.argv[1]
     email = sys.argv[2]
 
