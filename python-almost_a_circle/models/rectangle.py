@@ -119,7 +119,7 @@ class Rectangle(Base):
         """
         updates the values using args and kwargs
         """
-        attrbut = ["width", "height", "id", "y", "x"]
+        attrbut = [ "id","width", "height", "y", "x"]
         if args:
             for i, arg in enumerate(args):
                 setattr(self, attrbut[i], arg)
