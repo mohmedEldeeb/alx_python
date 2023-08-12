@@ -6,11 +6,9 @@ import requests
 
 
 def main():
-
-    req = requests.get('https://alu-intranet.hbtn.io/status')
-    print("Body response:")
-    print("\t- type:", (type(req.text)))
-    print("\t- content:", req.text)
+    url = 'https://alu-intranet.hbtn.io/status'
+    req = requests.get(url)
+    print("Body response:\n\t- type: {}\n\t- content: {}".format(type(req.text), req.text))
 
 
 if __name__ == "__main__":
