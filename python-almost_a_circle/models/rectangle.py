@@ -76,3 +76,16 @@ class Rectangle(Base):
         """
         self.validation('x', value)
         self.__x = value
+
+    @staticmethod
+    def validation(name, value):
+        """
+            to validation values of height and weight and x and y
+        """
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+        if value < 0 and (name == 'x' or name == 'y'):
+            raise ValueError("{} must be >= 0".format(name))
+        if value <= 0 and name != 'x' and name != 'y':
+            raise ValueError("{} must be > 0".format(name))
+        
