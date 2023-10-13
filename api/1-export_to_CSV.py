@@ -1,6 +1,6 @@
+import csv
 import requests
 import sys
-import csv
 
 def getEmployeeAndTodo(id):
     url = f"https://jsonplaceholder.typicode.com/users/{id}/todos"
