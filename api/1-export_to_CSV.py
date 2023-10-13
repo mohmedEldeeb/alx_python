@@ -20,10 +20,10 @@ def getEmployeeAndTodo(id):
             print(f"\t {todo['title']}")
 
     with open(f'{id}.csv', 'w', newline='') as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE'])
+        writer_fs = csv.writer(csvfile)
+        writer_fs.writerow(['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE'])
         for todo in todos:
-            writer.writerow([id, employee['name'], todo['completed'], todo['title']])
+            writer_fs.writerow([id, employee['name'], todo['completed'], todo['title']])
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
