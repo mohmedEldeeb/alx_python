@@ -11,7 +11,7 @@ def getEmployeeAndTodo(id):
     res = requests.get(url)
     employee = res.json()
 
-    completed_tasks = len([todo for todo in todos if todo['completed']])
+    completed_tasks = sum(1 for todo in todos if todo['completed'])
     all_tasks = len(todos)
 
     print(f"Employee {employee['name']} is done with tasks({completed_tasks}/{all_tasks}):")
@@ -20,10 +20,11 @@ def getEmployeeAndTodo(id):
             print(f"\t {todo['title']}")
 
     with open(f'{id}.csv', 'w', newline='') as csvfile:
-        writer_fs = csv.writer(csvfile)
-        writer_fs.writerow(['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE'])
+        writer = csv.writer(csvfile)
+        writer.writerow(['USER_ID', 'USERNAME', 'TASK_COMPLETED_STATUS', 'TASK_TITLE'])
         for todo in todos:
-            writer_fs.writerow([id, employee['name'], todo['completed'], todo['title']])
+            writer.writerow([id, employee['name'], todo['completed'], todo['title']])
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
