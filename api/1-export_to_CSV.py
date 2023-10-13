@@ -13,7 +13,11 @@ def getEmployeeAndTodo(id):
     employee = res.json()
 
     completed_tasks = sum(1 for todo in todos if todo['completed'])
-    all_tasks = len(todos)
+    all_tasks = 0
+
+    for i in todos:
+        if i['userId'] == id:
+            total_tasks += 1
 
     print(f"Employee {employee['name']} is done with tasks({completed_tasks}/{all_tasks}):")
     for todo in todos:
