@@ -14,7 +14,6 @@ def getEmployeeAndTodo(id):
     completed_tasks = len([todo for todo in todos if todo['completed']])
     all_tasks = len(todos)
 
-
     print(f"Employee {employee['name']} is done with tasks({completed_tasks}/{all_tasks}):")
     for todo in todos:
         if todo['completed']:
