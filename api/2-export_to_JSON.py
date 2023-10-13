@@ -1,5 +1,6 @@
 import json
 import requests
+import sys
 
 def getEmployeeAndTodo(id):
     url = f"https://jsonplaceholder.typicode.com/users/{id}/todos"
@@ -29,4 +30,12 @@ def getEmployeeAndTodo(id):
 
     with open(f'{id}.json', 'w') as jsonfile:
         json.dump(data, jsonfile)
-        
+
+
+if __name__ == '__main__':
+    if len(sys.argv) != 2:
+        print(f"what is the id: {sys.argv[0]} EMPLOYEE_ID")
+        sys.exit(1)
+
+    id = sys.argv[1]
+    getEmployeeAndTodo(id)
