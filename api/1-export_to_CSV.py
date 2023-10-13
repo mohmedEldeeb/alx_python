@@ -3,6 +3,7 @@ import requests
 import sys
 
 def getEmployeeAndTodo(id):
+    id = int(id)
     url = f"https://jsonplaceholder.typicode.com/users/{id}/todos"
     res = requests.get(url)
     todos = res.json()
